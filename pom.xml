@@ -6,7 +6,7 @@
 
     <groupId>net.brcdev</groupId>
     <artifactId>MyItems</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <build>
         <sourceDirectory>src/main/java/</sourceDirectory>
@@ -53,8 +53,8 @@
         </dependency>
         <dependency>
             <groupId>com.github.brcdev-minecraft</groupId>
-	    <artifactId>shopgui-api</artifactId>
-            <version>2.2.0</version>
+            <artifactId>shopgui-api</artifactId>
+            <version>2.4.0</version>
         </dependency>
     </dependencies>
 </project>

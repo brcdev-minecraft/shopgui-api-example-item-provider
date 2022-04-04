@@ -13,11 +13,15 @@ After you build the artifact using Maven command above, you can drop in the plug
 
 You can expect this kind of messages during server startup:
 ```
-[23:46:06] [Server thread/INFO]: [MyItems] Enabling MyItems v1.0.0
+[20:49:32] [Server thread/INFO]: [MyItems] Enabling MyItems v1.1.0
+[20:49:32] [Server thread/INFO]: [MyItems] ShopGUI+ detected.
 ...
-[23:46:06] [Server thread/INFO]: Done (18.512s)! For help, type "help"
+[20:49:32] [Server thread/INFO]: [ShopGUIPlus] Enabling ShopGUIPlus v1.73.1
+[20:49:32] [Server thread/INFO]: [MyItems] Registered item provider in ShopGUI+!
 ...
-[23:46:48] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for MyItems.
+[20:49:34] [Server thread/INFO]: Done (13.409s)! For help, type "help"
+...
+[20:49:37] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for MyItems.
 ```
 
 It means that the MyItems plugin successfully registered its item provider in ShopGUI+ and can be used in shops.

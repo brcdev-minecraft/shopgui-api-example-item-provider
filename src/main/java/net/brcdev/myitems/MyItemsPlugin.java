@@ -1,20 +1,22 @@
 package net.brcdev.myitems;
 
-import net.brcdev.myitems.provider.MyItemsProvider;
-import net.brcdev.shopgui.ShopGuiPlusApi;
+import net.brcdev.myitems.shopguiplus.MyItemsShopGUIHook;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyItemsPlugin extends JavaPlugin {
 
-  private MyItemsProvider myItemsProvider;
+  private MyItemsShopGUIHook myItemsShopGUIHook;
 
   @Override
   public void onEnable() {
-    hookIntoShopGui();
-  }
+    if (Bukkit.getPluginManager().getPlugin("ShopGUIPlus") != null) {
+      this.myItemsShopGUIHook = new MyItemsShopGUIHook(this);
+      Bukkit.getPluginManager().registerEvents(myItemsShopGUIHook, this);
 
-  private void hookIntoShopGui() {
-    this.myItemsProvider = new MyItemsProvider();
-    ShopGuiPlusApi.registerItemProvider(myItemsProvider);
+      this.getLogger().info("ShopGUI+ detected.");
+    } else {
+      this.getLogger().warning("ShopGUI+ not found.");
+    }
   }
 }

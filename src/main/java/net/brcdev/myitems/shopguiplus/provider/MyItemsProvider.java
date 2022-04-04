@@ -1,4 +1,4 @@
-package net.brcdev.myitems.provider;
+package net.brcdev.myitems.shopguiplus.provider;
 
 import net.brcdev.shopgui.provider.item.ItemProvider;
 import org.bukkit.Material;
